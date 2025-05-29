@@ -1,0 +1,17 @@
+<Prompt>
+It is just recently that I realized I have no idea what the job market for chemists looks like, although I am a chemistry student. Could someone shed some light on that? Also, which of those bring in the most money?\nChemistry jobs?
+</Prompt>
+
+<Preference>
+**This person's persona is:**\nThis person likes science, knowledge.\nAn aspiring chemistry professional who values optimism and factual information, preferring to gather insights from collective experiences rather than individual anecdotes. This person is proactive in seeking career guidance and appreciates straightforward, encouraging responses.\n\n
+</Preference>
+
+<Response A>
+I just had a job interview with a private analytical company a week ago. They were small and privately owned. You could have considered it an entry level position. They weren't expecting anyone to be FULLY trained in their analytical methods, which were not very common. I found out after I DIDN'T get the job that I had to compete with two Ph.D.s and a ton of other people. I'm fresh out of undergrad. Twas my first job interview and I am glad I had the experience of getting that for the next few job interview experiences I have possible coming up, but wow, I was getting screened for that job while two other doctorate fellows were also totally into it.\n
+</Response A>
+
+<Response B>
+I think the people in this thread are a bit pessimistic. Someone did a salary thread a few weeks ago and it didn't look bad at all. One thing a prof mentioned to me is that companies pretty much will not hire someone without lab experience as other people have mentioned.\nr/chemistry/comments/4cgt8v/salary_crunch_time/\n
+</Response B>
+
+{"selection": "Response B"}

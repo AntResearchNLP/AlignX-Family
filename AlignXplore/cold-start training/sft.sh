@@ -1,0 +1,22 @@
+CUDA_VISIBLE_DEVICES=7,6,5,4,3,2,1,0 torchrun --nproc_per_node=8 --master_port=20213 sft.py  \
+        --model_name_or_path /model_path \
+        --bf16 True \
+        --output_dir /output_path \
+        --model_max_length 16384 \
+        --use_flash_attn True \
+        --data_path  /cold_start.json \
+        --low_rank_training False \
+        --num_train_epochs 2  \
+        --per_device_train_batch_size 1     \
+        --gradient_accumulation_steps 16     \
+        --evaluation_strategy "no"     \
+        --save_strategy "epoch"     \
+        --save_total_limit 1     \
+        --learning_rate 2e-5     \
+        --weight_decay 0.0     \
+        --warmup_ratio 0.1     \
+        --lr_scheduler_type "cosine"     \
+        --logging_steps 10     \
+        --deepspeed ds_configs/stage2.json \
+        --report_to "none" \
+        --tf32 True

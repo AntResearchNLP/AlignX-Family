@@ -3,6 +3,7 @@
 <h1 style="font-size: 35px;">AlignX-Family: Toward <i>Human-Like</i> SuperIntelligence via Personalized Alignment</h1>
 
 
+<!--
 <p align="center">
  <a href="#survey">Survey</a> •
  <a href="#alignx">AlignX</a> •
@@ -11,8 +12,10 @@
 </p>
 
 </div>
+-->
 
 
+# :bulb: Introduction
 # Survey
 
 We have published a survey that presents the first comprehensive review of personalized alignment—a paradigm that enables LLMs to adapt their behavior within ethical boundaries based on individual preferences. For more details, see [A Survey on Personalized Alignment -- The Missing Piece for Large Language Models in Real-World Applications](https://arxiv.org/abs/2503.17003).

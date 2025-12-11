@@ -12,7 +12,7 @@
 </p>
 -->
 
-<img src="figures/EQ+IQ.png" width="1000px">
+<img src="figures/EQ+IQ.png" width="800px">
 
 </div>
 

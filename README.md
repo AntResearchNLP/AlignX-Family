@@ -1,6 +1,11 @@
 <div align="center">
 
+<h1 style="font-weight:700; letter-spacing:2px;">
+  ALIGN<span style="font-weight:900;">X</span>
+</h1>
+<!--
 <h1 style="font-size: 40px;">AlignX-Family: Toward Human-Like SuperIntelligence</h1>
+-->
 
 <p align="center">
  <a href="#survey">Survey</a> •

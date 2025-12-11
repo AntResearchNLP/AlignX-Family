@@ -1,6 +1,6 @@
 <div align="center">
 
-<h1 style="font-size: 35px;">AlignX-Family: Toward _Human-Like_ SuperIntelligence via Personalized Alignment</h1>
+<h1 style="font-size: 35px;">AlignX-Family: Toward <i>Human-Like</i> SuperIntelligence via Personalized Alignment</h1>
 
 
 <p align="center">

@@ -11,6 +11,9 @@
  <a href="#alignxplore">AlignXplore</a>
 </p>
 -->
+
+<img src="figures/EQ+IQ.png" width="300px">
+
 </div>
 
 

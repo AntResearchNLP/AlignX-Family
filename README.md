@@ -15,7 +15,7 @@
 -->
 
 
-# :bulb: Introduction
+## :bulb: Introduction
 # Survey
 
 We have published a survey that presents the first comprehensive review of personalized alignment—a paradigm that enables LLMs to adapt their behavior within ethical boundaries based on individual preferences. For more details, see [A Survey on Personalized Alignment -- The Missing Piece for Large Language Models in Real-World Applications](https://arxiv.org/abs/2503.17003).

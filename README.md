@@ -19,6 +19,11 @@
 
 
 ## :bulb: Introduction
+AlignX-Family is a research initiative dedicated to advancing the personalization of large language models (LLMs). The project was initiated in late 2024, driven by the recognition that personalization is a critical prerequisite for making the superintelligence demonstrated by state-of-the-art LLMs broadly accessible and practically useful to diverse end users. At the time, however, the community lacked both high-quality open-source data and a systematic research framework to support rigorous investigation in this space.
+
+To address these gaps, AlignX-Family establishes a comprehensive framework for LLM personalization. We open-source the largest dataset to date for personalized alignment, release a 7B model that can infer user preferences from complex behavioral signals through deep reasoning, and demonstrate how the induced preferences can be broadly leveraged to improve performance across a wide range of personalization-driven tasks.
+
+Ultimately, AlignX-Family seeks to push personalization to the forefront of LLM research and serve as a foundational resource for building superintelligent systems that are not only powerful, but also deeply aligned with individual users.
 # Survey
 
 We have published a survey that presents the first comprehensive review of personalized alignment—a paradigm that enables LLMs to adapt their behavior within ethical boundaries based on individual preferences. For more details, see [A Survey on Personalized Alignment -- The Missing Piece for Large Language Models in Real-World Applications](https://arxiv.org/abs/2503.17003).

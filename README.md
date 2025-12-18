@@ -36,6 +36,7 @@ We have published a survey that presents the first comprehensive review of perso
 
 [![arXiv](https://img.shields.io/badge/Paper-arXiv-red.svg)](https://arxiv.org/abs/2503.15463)
 [![🤗 HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Full%20Data-blue)](https://huggingface.co/datasets/JinaLeejnl/AlignX)
+[![🤗 HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Test%20Data-green)](https://huggingface.co/datasets/JinaLeejnl/AlignX-test)
 
 
 

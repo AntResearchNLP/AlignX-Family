@@ -43,13 +43,16 @@ We have published a survey that presents the first comprehensive review of perso
 [![🤗 HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Full%20Data-yellow)](https://huggingface.co/datasets/JinaLeejnl/AlignX)
 [![🤗 HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Test%20Data-yellow)](https://huggingface.co/datasets/JinaLeejnl/AlignX-test)
 
+AlignX constructs a dataset with 1,311,622 examples for the research of LLM personalization. 
 
 
+<!--
 ## Links
 
 - 📜 [Paper](https://arxiv.org/abs/2503.15463)
 - 🤗 [AlignX](https://huggingface.co/datasets/JinaLeejnl/AlignX)
 - 🤗 [AlignX<sub>test</sub>](https://huggingface.co/datasets/JinaLeejnl/AlignX-test)
+-->
 
 ## Dataset Statistics
 

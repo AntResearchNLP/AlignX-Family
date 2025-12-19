@@ -93,7 +93,7 @@ AlignX releases the <strong>LARGEST</strong> open dataset for personalization re
 }
 ```
 
-## Statistics
+## Data Sources
 
 | **Source** | **Reddit** | **PKU-SafeRLHF** | **UltraFeedback** | **HelpSteer2** |
 |------------|------------|------------------|-------------------|----------------|

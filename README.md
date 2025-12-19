@@ -20,7 +20,7 @@
 
 
 
-## :bulb: Introduction
+# :bulb: Introduction
 <strong>AlignX-Family</strong> is a research initiative focused on advancing the personalization of large language models (LLMs). Launched in late 2024, the project is motivated by the conviction that personalization is essential to making the superintelligence of state-of-the-art LLMs broadly accessible and practically useful for diverse users. At the time of its inception, the field lacked both high-quality open-source datasets and a systematic research framework to support rigorous study of LLM personalization.
 
 To date, AlignX-Family comprises three research works:
@@ -37,38 +37,18 @@ We have published a survey that presents the first comprehensive review of perso
 
 -->
 
-## :gear: AlignX
+# :gear: AlignX
 
 [![arXiv](https://img.shields.io/badge/Paper-arXiv-red.svg)](https://arxiv.org/abs/2503.15463)
 [![🤗 HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Full%20Data-yellow)](https://huggingface.co/datasets/JinaLeejnl/AlignX)
 [![🤗 HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Test%20Data-yellow)](https://huggingface.co/datasets/JinaLeejnl/AlignX-test)
 
-AlignX constructs a dataset with 1,311,622 examples for the research of LLM personalization. 
+AlignX releases the <strong>LARGEST</strong> open dataset for personalization research in the era of large language models, featuring <strong>1,311,622</strong> carefully curated examples.
++ <strong>Theoretically Sound</strong>: a 90-dimensional preference space that unifies foundational psychological theories (including the Big Five Personality Traits, Maslow’s Hierarchy of Needs, and Murray’s System of Needs), cutting-edge research in recommendation systems and LLM alignment, and real-world interest taxonomies distilled from major English and Chinese social media platforms (including X, Facebook, Zhihu, and RedNote).
++ <strong>Comprehensive</strong>: beyond response preference pairs, the dataset delivers rich persona signals—including user-generated content (pointwise), comparative feedback (pairwise), and demographic attributes (pointwise).
++ <strong>Privacy-Preserving</strong>: all persona signals are fully synthesized using large language models, ensuring that no real personal information is collected or exposed.
 
-
-<!--
-## Links
-
-- 📜 [Paper](https://arxiv.org/abs/2503.15463)
-- 🤗 [AlignX](https://huggingface.co/datasets/JinaLeejnl/AlignX)
-- 🤗 [AlignX<sub>test</sub>](https://huggingface.co/datasets/JinaLeejnl/AlignX-test)
--->
-
-## Dataset Statistics
-
-The table below summarizes the data sources and statistics for AlignX, involving both large-scale Reddit data and existing alignment datasets to maintain universal value alignment capabilities, with a total of 1,311,622 samples.
-
-| **Source** | **Reddit** | **PKU-SafeRLHF** | **UltraFeedback** | **HelpSteer2** |
-|------------|------------|------------------|-------------------|----------------|
-| **Dimension** | The 90 self-defined preference dimensions | Safety | Helpfulness / Honesty / Instruction-Following / Truthfulness | Helpfulness / Correctness / Coherence / Complexity / Verbosity |
-| **#Examples** | 1,225,988 | 10,714 | 11,629 / 16,809 / 36,169 / 7,219 | 2,255 / 144 / 26 / 33 / 636 |
-
-
-## Dataset Overview
-
-<img src="figures/dataset_overview.png" width="1200px">
-
-## Dataset Format
+## Data Format
 
 ```jsonc
 {
@@ -112,6 +92,30 @@ The table below summarizes the data sources and statistics for AlignX, involving
     ]
 }
 ```
+
+## Statistics
+
+| **Source** | **Reddit** | **PKU-SafeRLHF** | **UltraFeedback** | **HelpSteer2** |
+|------------|------------|------------------|-------------------|----------------|
+| **Dimension** | 90 preference dimensions | Safety | Helpfulness / Honesty / Instruction-Following / Truthfulness | Helpfulness / Correctness / Coherence / Complexity / Verbosity |
+| **#Examples** | 1,225,988 | 10,714 | 11,629 / 16,809 / 36,169 / 7,219 | 2,255 / 144 / 26 / 33 / 636 |
+
+## Citation
+```
+@article{li20251,
+  title={From 1,000,000 users to every user: Scaling up personalized preference for user-level alignment},
+  author={Li, Jia-Nan and Guan, Jian and Wu, Songhao and Wu, Wei and Yan, Rui},
+  journal={arXiv preprint arXiv:2503.15463},
+  year={2025}
+}
+```
+
+
+<!--
+## Dataset Overview
+
+<img src="figures/dataset_overview.png" width="1200px">
+-->
 
 
 # AlignXpert

@@ -1,6 +1,6 @@
 <div align="center">
 
-# AlignX-Family: Toward <i>Human-Like</i> SuperIntelligence via Personalized Alignment</h1>
+# AlignX-Family: Personalizing Large Language Models for <i>Human-Like</i> SuperIntelligence</h1>
 
 
 <!--

@@ -20,7 +20,7 @@
 
 
 
-# :bulb: Introduction
+# :pushpin: Overview
 <strong>AlignX-Family</strong> is a research initiative focused on advancing the personalization of large language models (LLMs). Launched in late 2024, the project is motivated by the conviction that personalization is essential to making the superintelligence of state-of-the-art LLMs broadly accessible and practically useful for diverse users. At the time of its inception, the field lacked both high-quality open-source datasets and a systematic research framework to support rigorous study of LLM personalization.
 
 To date, AlignX-Family comprises three research works:

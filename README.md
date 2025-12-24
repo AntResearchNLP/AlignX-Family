@@ -26,7 +26,7 @@
 To date, AlignX-Family comprises three research works:
 + <strong>AlignX</strong> contributes the largest open-source dataset for personalized alignment.
 + <strong>AlignXplore</strong> introduces a deep-reasoning approach to infer user preferences from complex behavioral signals, with its key technical innovation being the ability to dynamically update preferences from streaming user interactions.
-+ <strong>AlignXplore+</strong> further demonstrates that the inferred preferences can be leveraged beyond response selection to enhance a broad range of downstream personalized tasks, including recommendation and response generation.
++ <strong>AlignXplore+</strong> further demonstrates that preferences inferred from heterogeneous sources can be leveraged beyond response selection to enhance a broad range of downstream personalized tasks, including recommendation and response generation.
 
 Overall, AlignX-Family aims to bring personalization to the forefront of LLM research and to serve as a foundational resource for building superintelligent systems that are not only powerful, but also deeply aligned with individual users.
 

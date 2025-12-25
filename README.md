@@ -16,8 +16,8 @@
 
 
 <p align="center">
- <a href="#alignx">AlignX</a> •
- <a href="#alignxplore">AlignXplore</a>
+ <a href="#gear-alignx">AlignX</a> •
+ <a href="#robot-alignxplore">AlignXplore</a>
 </p>
 
 <img src="figures/EQ+IQ.png" width="80%">

@@ -43,7 +43,9 @@ We have published a survey that presents the first comprehensive review of perso
 
 -->
 # :rocket: Quick Start
-New to LLM personalization? Our paper [A Survey on Personalized Alignment: The Missing Piece for Large Language Models in Real-World Applications](https://aclanthology.org/2025.findings-acl.277.pdf) provides a clear roadmap of the field, helping you quickly understand what the community has explored and where it is heading.
+New to LLM personalization?
+
+Our paper [A Survey on Personalized Alignment: The Missing Piece for Large Language Models in Real-World Applications](https://aclanthology.org/2025.findings-acl.277.pdf) provides a clear roadmap of the field, helping you quickly understand what the community has explored and where it is heading.
 
 
 # :gear: AlignX

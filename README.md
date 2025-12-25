@@ -14,6 +14,12 @@
 
 <br>
 
+
+<p align="center">
+ <a href="#AlignX">AlignX</a> •
+ <a href="#AlignXplore">AlignXplore</a>
+</p>
+
 <img src="figures/EQ+IQ.png" width="80%">
 
 </div>

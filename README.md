@@ -36,12 +36,9 @@ To date, AlignX-Family comprises three research works:
 
 Overall, AlignX-Family aims to bring personalization to the forefront of LLM research and to serve as a foundational resource for building superintelligent systems that are not only powerful, but also deeply aligned with individual users.
 
-<!--
-# Survey
+<img src="figures/data_alignx.pdf" width="80%">
 
-We have published a survey that presents the first comprehensive review of personalized alignment—a paradigm that enables LLMs to adapt their behavior within ethical boundaries based on individual preferences. For more details, see [A Survey on Personalized Alignment -- The Missing Piece for Large Language Models in Real-World Applications](https://arxiv.org/abs/2503.17003).
 
--->
 # :rocket: Quick Start
 New to LLM personalization?
 

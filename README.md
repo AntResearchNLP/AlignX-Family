@@ -37,7 +37,6 @@ To date, AlignX-Family comprises three research works:
 Overall, AlignX-Family aims to bring personalization to the forefront of LLM research and to serve as a foundational resource for building superintelligent systems that are not only powerful, but also deeply aligned with individual users.
 
 
-<img src="figures/AlignX_Texonomy.png" width="80%">
 
 # :rocket: Quick Start
 New to LLM personalization?
@@ -51,10 +50,16 @@ Our paper [A Survey on Personalized Alignment: The Missing Piece for Large Langu
 [![🤗 HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Full%20Data-yellow)](https://huggingface.co/datasets/JinaLeejnl/AlignX)
 [![🤗 HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Test%20Data-yellow)](https://huggingface.co/datasets/JinaLeejnl/AlignX-test)
 
+
+<img src="figures/AlignX_Texonomy.png" align="right" width="500"/>
+
 AlignX releases the <strong>LARGEST</strong> open dataset for personalization research in the era of large language models, featuring <strong>1,311,622</strong> carefully curated examples.
 + <strong>Theoretically Sound</strong>: a 90-dimensional preference space that unifies foundational psychological theories (including the Big Five Personality Traits, Maslow’s Hierarchy of Needs, and Murray’s System of Needs), cutting-edge research in recommendation systems and LLM alignment, and real-world interest taxonomies distilled from major English and Chinese social media platforms (including X, Facebook, Zhihu, and RedNote).
 + <strong>Comprehensive</strong>: beyond response preference pairs, the dataset delivers rich persona signals—including user-generated content (pointwise), comparative feedback (pairwise), and demographic attributes (pointwise).
 + <strong>Privacy-Preserving</strong>: all persona signals are fully synthesized using large language models, ensuring that no real private information is collected or exposed.
+
+
+<br clear="both"/>
 
 ## Data Format
 

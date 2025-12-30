@@ -63,7 +63,7 @@ AlignX releases the <strong>LARGEST</strong> open dataset for personalization re
 - <strong>Privacy-Preserving</strong>: all persona signals are fully synthesized using large language models, ensuring that no real private information is collected or exposed.
 
 <p align="center">
-  <img src="figures/AlignX_Taxonomy.png" width="85%" alt="AlignX taxonomy"/>
+  <img src="figures/AlignX_Taxonomy.png" width="80%" alt="AlignX taxonomy"/>
 </p>
 <p align="center">
   <em>Figure: The 90-dimensional taxonomy used to construct the preference space in AlignX.</em>

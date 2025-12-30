@@ -1,16 +1,10 @@
 <div align="center">
 
+
+
+
 # AlignX-Family: Personalizing Large Language Models for <i>Human-Like</i> SuperIntelligence</h1>
 
-
-<!--
-<p align="center">
- <a href="#survey">Survey</a> •
- <a href="#alignx">AlignX</a> •
- <a href="#alignxpert">AlignXpert</a> •
- <a href="#alignxplore">AlignXplore</a>
-</p>
--->
 
 <br>
 

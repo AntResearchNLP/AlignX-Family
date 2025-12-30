@@ -66,7 +66,7 @@ AlignX releases the <strong>LARGEST</strong> open dataset for personalization re
   <img src="figures/AlignX_Taxonomy.png" width="85%" alt="AlignX taxonomy"/>
 </p>
 <p align="center">
-  <em>Figure: The 90-dimensional preference taxonomy used to construct the preference space in AlignX.</em>
+  <em>Figure: The 90-dimensional taxonomy used to construct the preference space in AlignX.</em>
 </p>
 
 ## Data Format

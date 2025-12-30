@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="figures/EQ+IQ2.png" width="100%" alt="AlignX-Family: Reasoning Meets Empathy">
+<img src="figures/EQ+IQ3.png" width="100%" alt="AlignX-Family: Reasoning Meets Empathy">
 
 
 

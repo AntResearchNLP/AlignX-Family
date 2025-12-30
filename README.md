@@ -1,5 +1,6 @@
 <div align="center">
 
+<img src="figures/EQ+IQ2.png" width="100%" alt="AlignX-Family: Reasoning Meets Empathy">
 
 
 
@@ -14,7 +15,6 @@
  <a href="#robot-alignxplore">AlignXplore</a>
 </p>
 
-<img src="figures/EQ+IQ.png" width="80%">
 
 </div>
 

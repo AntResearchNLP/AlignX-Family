@@ -259,3 +259,5 @@ cd AlignXplore/reinforcement learning
 [![🤗 HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Eval%20Data-yellow)](https://huggingface.co/datasets/VanillaH1/AlignXplorePlus-Benchmark)
 [![🤗 HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Model-yellow)](https://huggingface.co/VanillaH1/AlignXplore-Plus)
 
+<strong>AlignXplore+</strong> represents a significant upgrade to AlignXplore, advancing the vision that natural language can function as a universal, model- and task-agnostic interface for representing fine-grained, multi-dimensional user preferences.
+- <strong> General-Purpose </strong>: AlignXplore+ operates in more realistic, real-world scenario, demonstrating that high-quality user preference summaries can be inferred from heterogeneous sources, including social networks, e-commerce platforms, and news streams.

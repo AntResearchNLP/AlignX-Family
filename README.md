@@ -249,3 +249,9 @@ cd AlignXplore/reinforcement learning
       url={https://arxiv.org/abs/2505.18071}, 
 }
 ```
+
+# :robot: :zap: AlignXplore+
+[![arXiv](https://img.shields.io/badge/Paper-arXiv-red.svg)](https://arxiv.org/abs/2505.18071)
+[![🤗 HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Data-yellow)](https://huggingface.co/datasets/JinaLeejnl/AlignXplore)
+[![🤗 HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Model-yellow)](https://huggingface.co/JinaLeejnl/AlignXplore-7B-Streaming)
+

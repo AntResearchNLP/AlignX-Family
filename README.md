@@ -11,7 +11,7 @@ AlignX-Family: Personalizing Large Language Models for <em>Human-Like</em> Super
 
 
 <p align="center">
- <a href="#gear-alignx">AlignX</a> •
+ <a href="#package-alignx">AlignX</a> •
  <a href="#robot-alignxplore">AlignXplore</a>
 </p>
 
@@ -42,7 +42,7 @@ Our paper [A Survey on Personalized Alignment: The Missing Piece for Large Langu
 
 
 
-# :gear: AlignX
+# :package: AlignX
 
 [![arXiv](https://img.shields.io/badge/Paper-arXiv-red.svg)](https://arxiv.org/abs/2503.15463)
 [![🤗 HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Full%20Data-yellow)](https://huggingface.co/datasets/JinaLeejnl/AlignX)

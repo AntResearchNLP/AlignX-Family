@@ -9,13 +9,14 @@ AlignX-Family: Personalizing Large Language Models for <em>Human-Like</em> Super
 </h1>
 
 
+<!--
 
 <p align="center">
  <a href="#package-alignx">AlignX</a> •
  <a href="#robot-alignxplore">AlignXplore</a>
 </p>
 
-
+-->
 </div>
 
 
@@ -24,9 +25,9 @@ AlignX-Family: Personalizing Large Language Models for <em>Human-Like</em> Super
 <strong>AlignX-Family</strong> is a research initiative focused on advancing the personalization of large language models (LLMs). Launched in late 2024, the project is motivated by the conviction that personalization is essential to making the superintelligence of state-of-the-art LLMs broadly accessible and practically useful for diverse users. At the time of its inception, the field lacked both high-quality open-source datasets and a systematic research framework to support rigorous study of LLM personalization.
 
 To date, AlignX-Family comprises three research works:
-- <strong>AlignX</strong> contributes the largest open-source dataset for personalized alignment.
-- <strong>AlignXplore</strong> introduces a deep-reasoning approach to infer user preferences from complex behavioral signals, with its key technical innovation being the ability to dynamically update preferences from streaming user interactions.
-- <strong>AlignXplore+</strong> further demonstrates that preferences inferred from heterogeneous sources can be leveraged beyond response selection to enhance a broad range of downstream personalized tasks, including recommendation and response generation.
+- <strong><a href="#package-alignx">AlignX</a></strong> contributes the largest open-source dataset for personalized alignment.
+- <strong><a href="#robot-alignxplore">AlignXplore</a></strong> introduces a deep-reasoning approach to infer user preferences from complex behavioral signals, with its key technical innovation being the ability to dynamically update preferences from streaming user interactions.
+- <strong><a href="#robot-zap-alignxplore">AlignXplore+</a></strong> further unlocks the potential of AlignXplore — learning preference inference models from heterogeneous signals and extending their impact far beyond response selection to power a broad range of personalized applications, from recommendation to response generation.
 
 Overall, AlignX-Family aims to bring personalization to the forefront of LLM research and to serve as a foundational resource for building superintelligent systems that are not only powerful, but also deeply aligned with individual users.
 
@@ -252,6 +253,8 @@ cd AlignXplore/reinforcement learning
 
 # :robot: :zap: AlignXplore+
 [![arXiv](https://img.shields.io/badge/Paper-arXiv-red.svg)](https://arxiv.org/abs/2505.18071)
-[![🤗 HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Data-yellow)](https://huggingface.co/datasets/JinaLeejnl/AlignXplore)
-[![🤗 HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Model-yellow)](https://huggingface.co/JinaLeejnl/AlignXplore-7B-Streaming)
+[![🤗 HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-SFT%20Data-yellow)](https://huggingface.co/datasets/VanillaH1/AlignXplorePlus-SFT)
+[![🤗 HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-RL%20Data-yellow)](https://huggingface.co/datasets/VanillaH1/AlignXplorePlus-RL)
+[![🤗 HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Eval%20Data-yellow)](https://huggingface.co/datasets/VanillaH1/AlignXplorePlus-Benchmark)
+[![🤗 HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Model-yellow)](https://huggingface.co/VanillaH1/AlignXplore-Plus)
 

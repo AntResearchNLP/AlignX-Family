@@ -1,23 +1,22 @@
 <div align="center">
 
-<img src="figures/EQ+IQ3.png" width="100%" alt="AlignX-Family: Reasoning Meets Empathy">
+<img src="figures/v3.png" width="100%" alt="AlignX-Family: Reasoning Meets Empathy">
 
 
 
 <h1 align="center" style="font-size: 40px; font-weight: 800; letter-spacing: -0.5px;">
-AlignX-Family: Personalizing Large Language Models for <em>Human-Like</em> SuperIntelligence
+AlignX-Family
 </h1>
 
-
-
-<!--
-
-<p align="center">
- <a href="#package-alignx">AlignX</a> •
- <a href="#robot-alignxplore">AlignXplore</a>
+<p align="center" style="font-size: 17px; color: #555;">
+Personalizing Large Language Models for <em>Human-Like</em> SuperIntelligence
 </p>
 
--->
+
+<p align="center" style="font-size: 16px;">
+<a href="#">AlignX</a> &nbsp;•&nbsp; <a href="#">AlignXplore</a> &nbsp;•&nbsp; <a href="#">AlignXplore+</a>
+</p>
+
 </div>
 
 

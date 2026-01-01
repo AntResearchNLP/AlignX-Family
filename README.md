@@ -22,16 +22,23 @@ Personalizing Large Language Models for <em>Human-Like</em> SuperIntelligence
 
 
 # :sparkles: Introduction
-<strong>AlignX-Family</strong> is a research initiative focused on advancing the personalization of large language models (LLMs). Launched in late 2024, the project is motivated by the conviction that personalization is essential to making the superintelligence of state-of-the-art LLMs broadly accessible and practically useful for diverse users. At the time of its inception, the field lacked both high-quality open-source datasets and a systematic research framework to support rigorous study of LLM personalization.
+<strong>AlignX-Family</strong> is a research initiative dedicated to advancing the personalization of large language models (LLMs). Launched in late 2024, the project is driven by a central conviction: <strong>personalization is a cornerstone for making the superintelligence exhibited by state-of-the-art LLMs broadly accessible and practically useful to diverse users.</strong> At the time of its inception, however, the community faced a critical gap—there were neither high-quality open-source datasets nor a systematic research framework to support rigorous and reproducible studies of LLM personalization.
 
+AlignX-Family was established to address this gap. The initiative originated from an early research effort codenamed <strong><a href="#package-alignx">AlignX</a></strong>, which focuses on constructing a large-scale dataset for personalized alignment. As the foundational work of the project, AlignX not only provides essential data infrastructure for subsequent explorations, but also lends its name to the broader research family. Building upon this foundation, we further investigated how user preferences can be dynamically reasoned as natural-language summaries from complex and often noisy behavioral signals. These efforts led to the development of <strong><a href="#robot-alignxplore">AlignXplore</a></strong> and its extension, <strong><a href="#robot-zap-alignxplore">AlignXplore+</a></strong>, which progressively elevates personalization from data construction, to preference reasoning, and ultimately to a universal interface for downstream applications.
+
+
+In parallel, the broader landscape of LLM development has rapidly shifted toward personalization. Leading industry models are increasingly incorporating mechanisms such as long-term memory, interactive preference elicitation, and explicit style control. While these advances deliver impressive user experiences, the <strong>core technologies underpinning personalized intelligence largely remain closed and inaccessible to the research community</strong>, limiting transparency, reproducibility, and collective progress.
+
+
+Through full open-sourcing, AlignX-Family aims to bring personalization to the forefront of LLM research. The project aspires to serve as a foundational resource and shared research platform for the community—enabling the development of superintelligent systems that are not only powerful, but also deeply aligned with individual users.
+
+
+<!--
 To date, AlignX-Family comprises three research works:
 - <strong><a href="#package-alignx">AlignX</a></strong> contributes the largest open-source dataset for personalized alignment.
 - <strong><a href="#robot-alignxplore">AlignXplore</a></strong> introduces a deep-reasoning approach to infer user preferences from complex behavioral signals, with its key technical innovation being the ability to dynamically update preferences from streaming user interactions.
 - <strong><a href="#robot-zap-alignxplore">AlignXplore+</a></strong> further unlocks the potential of AlignXplore — learning preference inference models from heterogeneous signals and extending their impact far beyond response selection to power a broad range of personalized applications, from recommendation to response generation.
-
-Overall, AlignX-Family aims to bring personalization to the forefront of LLM research and to serve as a foundational resource for building superintelligent systems that are not only powerful, but also deeply aligned with individual users.
-
-
+-->
 
 # :rocket: Quick Start
 New to LLM personalization?

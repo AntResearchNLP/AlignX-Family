@@ -52,7 +52,7 @@ Our paper [A Survey on Personalized Alignment: The Missing Piece for Large Langu
 
 
 ## :link: Project Lineage
-In a nutshell, the evolution of <strong> AlignX-Family </strong>follows a clear roadmap of <strong>Data → Methodology → Scaling</strong>, progressively advancing the study of personalization in large language models.
+In a nutshell, the evolution of <strong> AlignX-Family </strong>follows a roadmap of <strong>Data → Methodology → Scaling</strong>, progressively advancing the study of personalization in large language models.
 
 To date, the project comprises three tightly connected sub-projects:
 

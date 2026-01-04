@@ -26,7 +26,7 @@ Personalizing Large Language Models for <em>Human-Like</em> SuperIntelligence
 
 
 
-# :sparkles: Introduction
+## :sparkles: Introduction
 <strong>AlignX-Family</strong> is a research initiative dedicated to advancing the personalization of large language models (LLMs). Launched in late 2024, the project is driven by a central conviction: <strong>personalization is a cornerstone for making the superintelligence exhibited by state-of-the-art LLMs broadly accessible and practically useful to diverse users.</strong> At the time of its inception, however, the community faced a critical gap—there were neither high-quality open-source datasets nor a systematic research framework to support rigorous and reproducible studies of LLM personalization.
 
 AlignX-Family was established to address this gap. The initiative originated from an early research effort codenamed <strong><a href="#package-alignx">AlignX</a></strong>, which focuses on constructing a large-scale dataset for personalized alignment. As the foundational work of the project, AlignX not only provides essential data infrastructure for subsequent explorations, but also lends its name to the broader research family. Building upon this foundation, we further investigated how user preferences can be dynamically reasoned as natural-language summaries from complex and often noisy behavioral signals. These efforts led to the development of <strong><a href="#robot-alignxplore">AlignXplore</a></strong> and its extension, <strong><a href="#robot-zap-alignxplore">AlignXplore+</a></strong>, which progressively elevates personalization from data construction, to preference reasoning, and ultimately to a universal interface for downstream applications.
@@ -45,13 +45,13 @@ To date, AlignX-Family comprises three research works:
 - <strong><a href="#robot-zap-alignxplore">AlignXplore+</a></strong> further unlocks the potential of AlignXplore — learning preference inference models from heterogeneous signals and extending their impact far beyond response selection to power a broad range of personalized applications, from recommendation to response generation.
 -->
 
-# :rocket: Quick Start
+## :rocket: Quick Start
 New to LLM personalization?
 
 Our paper [A Survey on Personalized Alignment: The Missing Piece for Large Language Models in Real-World Applications](https://aclanthology.org/2025.findings-acl.277.pdf) provides a clear roadmap of the field, helping you quickly understand what the community has explored and where it is heading.
 
 
-# :link: Project Lineage
+## :link: Project Lineage
 In a nutshell, the evolution of <strong> AlignX-Family </strong>follows a clear roadmap of <strong>Data → Methodology → Scaling</strong>, progressively advancing the study of personalization in large language models.
 
 To date, the project comprises three tightly connected sub-projects:

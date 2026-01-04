@@ -69,7 +69,7 @@ AlignXplore introduces a deep-reasoning framework for inferring user preferences
 Building upon AlignXplore, AlignXplore+ explores how preference reasoning can be scaled <strong> across heterogeneous data sources </strong> — including social media, e-commerce platforms, and news streams — and <strong> generalized across tasks and models </strong>, demonstrating the viability of natural language as a universal interface for transferable personalization.
 
 <p align="center">
-  <img src="figures/RoadMap.png" width="80%" alt="RoadMap"/>
+  <img src="figures/RoadMap2.png" width="80%" alt="RoadMap"/>
 </p>
 <p align="center">
   <em>Figure: Roadmap of AlignX-Family.</em>

@@ -1,20 +1,25 @@
 <div align="center">
 
-<img src="figures/v3.png" width="100%" alt="AlignX-Family: Reasoning Meets Empathy">
-
-
-
 <h1 align="center" style="font-size: 40px; font-weight: 800; letter-spacing: -0.5px;">
-AlignX-Family
+AlignX-Family: <br>
+Personalizing Large Language Models for <em>Human-Like</em> SuperIntelligence
 </h1>
 
+
+<img src="figures/v3.png" width="80%" alt="AlignX-Family: Reasoning Meets Empathy">
+
+
+
+
+<!--
 <p align="center" style="font-size: 17px; color: #555;">
 Personalizing Large Language Models for <em>Human-Like</em> SuperIntelligence
 </p>
+-->
 
 
-<p align="center" style="font-size: 16px;">
-<a href="#">AlignX</a> &nbsp;•&nbsp; <a href="#">AlignXplore</a> &nbsp;•&nbsp; <a href="#">AlignXplore+</a>
+<p align="center" style="font-size: 17px; color: #555;">
+<a href="#package-alignx">AlignX</a> &nbsp;•&nbsp; <a href="#robot-alignxplore">AlignXplore</a> &nbsp;•&nbsp; <a href="#robot-zap-alignxplore">AlignXplore+</a>
 </p>
 
 </div>
@@ -46,9 +51,27 @@ New to LLM personalization?
 Our paper [A Survey on Personalized Alignment: The Missing Piece for Large Language Models in Real-World Applications](https://aclanthology.org/2025.findings-acl.277.pdf) provides a clear roadmap of the field, helping you quickly understand what the community has explored and where it is heading.
 
 
+# :link: Project Lineage
+In a nutshell, the evolution of <strong> AlignX-Family </strong>follows a clear roadmap of <strong>Data → Methodology → Scaling</strong>, progressively advancing the study of personalization in large language models.
+
+To date, the project comprises three tightly connected sub-projects:
+
+:package: <strong> <a href="#package-alignx">AlignX</a> — Data Foundation </strong>
+
+AlignX establishes the data foundation of the family by open-sourcing <strong> over 1.3 million examples </strong> to the research community for personalized alignment. It provides large-scale training resources and standardized evaluation testbeds, laying the groundwork for subsequent developments in AlignXplore and AlignXplore+.
+
+:robot: <strong> <a href="#robot-alignxplore">AlignXplore</a> — Methodology </strong>
+
+AlignXplore introduces a deep-reasoning framework for inferring user preferences from complex behavioral signals. Its key technical innovation lies in enabling <strong> dynamic preference updates from streaming user interactions </strong>, paving the way toward representing user preferences as structured natural-language summaries.
+
+:zap: <strong> <a href="#zap-alignxplore">AlignXplore+</a> — Scaling </strong>
+
+Building upon AlignXplore, AlignXplore+ explores how preference reasoning can be scaled <strong> across heterogeneous data sources </strong> — including social media, e-commerce platforms, and news streams — and <strong> generalized across tasks and models </strong>, demonstrating the viability of natural language as a universal interface for transferable personalization.
 
 
-
+<!--
+further unlocks the potential of AlignXplore — learning preference inference models from heterogeneous signals and extending their impact far beyond response selection to power a broad range of personalized applications, from recommendation to response generation.
+-->
 
 
 # :package: AlignX

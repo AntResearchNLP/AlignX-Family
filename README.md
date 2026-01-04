@@ -6,7 +6,7 @@ Personalizing Large Language Models for <em>Human-Like</em> SuperIntelligence
 </h1>
 
 
-<img src="figures/v3.png" width="80%" alt="AlignX-Family: Reasoning Meets Empathy">
+<img src="figures/v4.png" width="80%" alt="AlignX-Family: Reasoning Meets Empathy">
 
 
 

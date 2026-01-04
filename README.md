@@ -6,7 +6,7 @@ Personalizing Large Language Models for <em>Human-Like</em> SuperIntelligence
 </h1>
 
 
-<img src="figures/v5.png" width="80%" alt="AlignX-Family: Reasoning Meets Empathy">
+<img src="figures/v5.png" width="100%" alt="AlignX-Family: Reasoning Meets Empathy">
 
 
 
@@ -45,14 +45,9 @@ To date, AlignX-Family comprises three research works:
 - <strong><a href="#robot-zap-alignxplore">AlignXplore+</a></strong> further unlocks the potential of AlignXplore — learning preference inference models from heterogeneous signals and extending their impact far beyond response selection to power a broad range of personalized applications, from recommendation to response generation.
 -->
 
-## :rocket: Quick Start
-New to LLM personalization?
-
-Our paper [A Survey on Personalized Alignment: The Missing Piece for Large Language Models in Real-World Applications](https://aclanthology.org/2025.findings-acl.277.pdf) provides a clear roadmap of the field, helping you quickly understand what the community has explored and where it is heading.
-
 
 ## :link: Project Lineage
-In a nutshell, the evolution of <strong> AlignX-Family </strong>follows a roadmap of <strong>Data → Methodology → Scaling</strong>, progressively advancing the study of personalization in large language models.
+Our research follows a roadmap of <strong>Data → Methodology → Scaling</strong>, progressively advancing the study of personalization in large language models.
 
 To date, the project comprises three tightly connected sub-projects:
 
@@ -69,10 +64,10 @@ AlignXplore introduces a deep-reasoning framework for inferring user preferences
 Building upon AlignXplore, AlignXplore+ explores how preference reasoning can be scaled <strong> across heterogeneous data sources </strong> — including social media, e-commerce platforms, and news streams — and <strong> generalized across tasks and models </strong>, demonstrating the viability of natural language as a universal interface for transferable personalization.
 
 <p align="center">
-  <img src="figures/RoadMap2.png" width="80%" alt="RoadMap"/>
+  <img src="figures/RoadMap2.png" width="100%" alt="RoadMap"/>
 </p>
 <p align="center">
-  <em>Figure: Roadmap of AlignX-Family.</em>
+  <em>Figure: Roadmap of Our Research on LLM Personalization.</em>
 </p>
 
 
@@ -81,6 +76,11 @@ Building upon AlignXplore, AlignXplore+ explores how preference reasoning can be
 further unlocks the potential of AlignXplore — learning preference inference models from heterogeneous signals and extending their impact far beyond response selection to power a broad range of personalized applications, from recommendation to response generation.
 -->
 
+## :bulb: New to LLM Personalization?
+
+Our paper [A Survey on Personalized Alignment: The Missing Piece for Large Language Models in Real-World Applications](https://aclanthology.org/2025.findings-acl.277.pdf) provides a clear roadmap of the field, helping you quickly understand what the community has explored and where it is heading.
+
+:warning: This survey is a snapshot of the field as of early February 2025. Subsequent advances are not included. We are actively tracking new work and preparing an updated version.
 
 # :package: AlignX
 

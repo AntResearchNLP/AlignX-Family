@@ -124,7 +124,7 @@ If you aim to:
 > **AlignXplore+** elevates preference reasoning to a universal, natural language based interface that enables cross-task and cross-model personalization.
 
 ## 📄 Citations
-AlignX-Family is a collection of closely related research projects that jointly advance the personalization of large language models.  If you find the projects help, please consider citing the following papers accordingly:
+AlignX-Family is a collection of closely related research projects that jointly advance the personalization of large language models.  If you find the projects helpful, please consider citing the following papers accordingly:
 
 - **AlignX — dataset for personalized alignment**
 

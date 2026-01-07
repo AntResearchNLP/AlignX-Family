@@ -1,12 +1,18 @@
 <div align="center">
 
+
+
+<!--
 <h1 align="center" style="font-size: 40px; font-weight: 800; letter-spacing: -0.5px;">
 AlignX-Family: <br>
 Personalizing Large Language Models for <em>Human-Like</em> SuperIntelligence
 </h1>
-
+-->
+# AlignX-Family: Personalizing Large Language Models for <em>Human-Like</em> SuperIntelligence
 
 <img src="figures/v5.png" width="100%" alt="AlignX-Family: Reasoning Meets Empathy">
+
+
 
 
 
@@ -51,15 +57,15 @@ Our research follows a roadmap of <strong>Data → Methodology → Scaling</stro
 
 To date, the project comprises three tightly connected sub-projects:
 
-:package: <strong> <a href="#package-alignx">AlignX</a> — Data </strong>
+### :package: <strong> <a href="#package-alignx">AlignX</a> — Data </strong>
 
 AlignX establishes the data foundation of the family by open-sourcing <strong> over 1.3 million examples </strong> to the research community for personalized alignment. It provides large-scale training resources and standardized evaluation testbeds, laying the groundwork for subsequent developments in AlignXplore and AlignXplore+.
 
-:robot: <strong> <a href="#robot-alignxplore">AlignXplore</a> — Methodology </strong>
+### :robot: <strong> <a href="#robot-alignxplore">AlignXplore</a> — Methodology </strong>
 
 AlignXplore introduces a deep-reasoning framework for inferring user preferences from complex behavioral signals. Its key technical innovation lies in enabling <strong> dynamic preference updates from streaming user interactions </strong>, paving the way toward representing user preferences as structured natural-language summaries.
 
-:zap: <strong> <a href="#zap-alignxplore">AlignXplore+</a> — Scaling </strong>
+### :zap: <strong> <a href="#zap-alignxplore">AlignXplore+</a> — Scaling </strong>
 
 Building upon AlignXplore, AlignXplore+ explores how preference reasoning can be scaled <strong> across heterogeneous data sources </strong> — including social media, e-commerce platforms, and news streams — and <strong> generalized across tasks and models </strong>, demonstrating the viability of natural language as a universal interface for transferable personalization.
 

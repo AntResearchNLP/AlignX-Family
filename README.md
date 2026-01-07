@@ -1,6 +1,6 @@
 <div align="center">
 
-
+<img src="figures/v1.png" width="100%" alt="AlignX-Family: Reasoning Meets Empathy">
 
 <!--
 <h1 align="center" style="font-size: 40px; font-weight: 800; letter-spacing: -0.5px;">
@@ -10,7 +10,7 @@ Personalizing Large Language Models for <em>Human-Like</em> SuperIntelligence
 -->
 # AlignX-Family: Personalizing Large Language Models for <em>Human-Like</em> SuperIntelligence
 
-<img src="figures/v5.png" width="100%" alt="AlignX-Family: Reasoning Meets Empathy">
+
 
 
 

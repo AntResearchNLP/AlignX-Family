@@ -134,7 +134,7 @@ AlignX-Family is a collection of closely related research projects that jointly 
 
 - **AlignX — dataset for personalized alignment**
 
-```
+```bibtex
 @misc{li20251000000usersuserscaling,
       title={From 1,000,000 Users to Every User: Scaling Up Personalized Preference for User-level Alignment}, 
       author={Jia-Nan Li and Jian Guan and Songhao Wu and Wei Wu and Rui Yan},
@@ -148,7 +148,7 @@ AlignX-Family is a collection of closely related research projects that jointly 
 
 - **AlignXplore — framework for user reference reasoning**
 
- ```
+ ```bibtex
 @misc{li2025extendedinductivereasoningpersonalized,
       title={Extended Inductive Reasoning for Personalized Preference Inference from Behavioral Signals}, 
       author={Jia-Nan Li and Jian Guan and Wei Wu and Rui Yan},

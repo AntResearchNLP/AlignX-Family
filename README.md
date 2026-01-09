@@ -163,11 +163,15 @@ AlignX-Family is a collection of closely related research projects that jointly 
 - **AlignXplore+ — framework for user preference reasoning, with special focus on heterogeneous inputs and preference transferability**
 
 ```bibtex
-@article{xxxxx,
-  title={},
-  author={xxxxx},
-  journal={arXiv preprint arXiv:xxxx.xxxxx},
-  year={2024}
+@misc{liu2026textuniversalinterfacetransferable,
+      title={Text as a Universal Interface for Transferable Personalization}, 
+      author={Yuting Liu and Jian Guan and Jia-Nan Li and Wei Wu and Jiang-Ming Yang and Jianzhe Zhao and Guibing Guo},
+      year={2026},
+      eprint={2601.04963},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2601.04963}, 
+}
 ```
 
 <!--

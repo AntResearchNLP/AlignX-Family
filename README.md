@@ -25,7 +25,7 @@ Personalizing Large Language Models for <em>Human-Like</em> SuperIntelligence
 
 
 <p align="center" style="font-size: 17px; color: #555;">
-<a href="https://github.com/JinaLeejnl/AlignX">AlignX</a> &nbsp;•&nbsp; <a href="https://github.com/AntResearchNLP/AlignXplore">AlignXplore</a> &nbsp;•&nbsp; <a href="https://github.com/AntResearchNLP/AlignXplorePlus">AlignXplore+</a>
+<a href="./AlignX/README.md">AlignX</a> &nbsp;•&nbsp; <a href="./AlignXplore/README.md">AlignXplore</a> &nbsp;•&nbsp; <a href="./AlignXplorePlus/README.md">AlignXplore+</a>
 </p>
 
 </div>
@@ -35,7 +35,7 @@ Personalizing Large Language Models for <em>Human-Like</em> SuperIntelligence
 ## :sparkles: Introduction
 <strong>AlignX-Family</strong> is a research initiative dedicated to advancing the personalization of large language models (LLMs). Launched in late 2024, the project is driven by a central conviction: <strong>personalization is a cornerstone for making the superintelligence exhibited by state-of-the-art LLMs broadly accessible and practically useful to diverse users.</strong> At the time of its inception, however, the community faced a critical gap—there were neither high-quality open-source datasets nor a systematic research framework to support rigorous and reproducible studies of LLM personalization.
 
-AlignX-Family was established to address this gap. The initiative originated from an early research effort codenamed <strong><a href="https://github.com/JinaLeejnl/AlignX">AlignX</a></strong>, which focuses on constructing a large-scale dataset for personalized alignment. As the foundational work of the project, AlignX not only provides essential data infrastructure for subsequent explorations, but also lends its name to the broader research family. Building upon this foundation, we further investigated how user preferences can be dynamically reasoned as natural-language summaries from complex and often noisy behavioral signals. These efforts led to the development of <strong><a href="https://github.com/AntResearchNLP/AlignXplore">AlignXplore</a></strong> and its extension, <strong><a href="https://github.com/AntResearchNLP/AlignXplorePlus">AlignXplore+</a></strong>, which progressively elevates personalization from data construction, to preference reasoning, and ultimately to a universal interface for downstream applications.
+AlignX-Family was established to address this gap. The initiative originated from an early research effort codenamed <strong><a href="./AlignX/README.md">AlignX</a></strong>, which focuses on constructing a large-scale dataset for personalized alignment. As the foundational work of the project, AlignX not only provides essential data infrastructure for subsequent explorations, but also lends its name to the broader research family. Building upon this foundation, we further investigated how user preferences can be dynamically reasoned as natural-language summaries from complex and often noisy behavioral signals. These efforts led to the development of <strong><a href="./AlignXplore/README.md">AlignXplore</a></strong> and its extension, <strong><a href="./AlignXplorePlus/README.md">AlignXplore+</a></strong>, which progressively elevates personalization from data construction, to preference reasoning, and ultimately to a universal interface for downstream applications.
 
 
 In parallel, the broader landscape of LLM development has rapidly shifted toward personalization. Leading industry models are increasingly incorporating mechanisms such as long-term memory, interactive preference elicitation, and explicit style control. While these advances deliver impressive user experiences, the <strong>core technologies underpinning personalized intelligence largely remain closed and inaccessible to the research community</strong>, limiting transparency, reproducibility, and collective progress.
@@ -57,15 +57,15 @@ Our research follows a roadmap of <strong>Data → Methodology → Scaling</stro
 
 To date, the project comprises three tightly connected sub-projects:
 
-### :package: <strong> <a href="https://github.com/JinaLeejnl/AlignX">AlignX</a> — Data </strong>
+### :package: <strong> <a href="./AlignX/README.md">AlignX</a> — Data </strong>
 
 AlignX establishes the data foundation of the family by open-sourcing <strong> over 1.3 million examples </strong> to the research community for personalized alignment. It provides large-scale training resources and standardized evaluation testbeds, laying the groundwork for subsequent developments in AlignXplore and AlignXplore+.
 
-### :robot: <strong> <a href="https://github.com/AntResearchNLP/AlignXplore">AlignXplore</a> — Methodology </strong>
+### :robot: <strong> <a href="./AlignXplore/README.md">AlignXplore</a> — Methodology </strong>
 
 AlignXplore introduces a deep-reasoning framework for inferring user preferences from complex behavioral signals. Its key technical innovation lies in enabling <strong> dynamic preference updates from streaming user interactions </strong>, paving the way toward representing user preferences as structured natural-language summaries.
 
-### :zap: <strong> <a href="https://github.com/AntResearchNLP/AlignXplorePlus">AlignXplore+</a> — Scaling </strong>
+### :zap: <strong> <a href="./AlignXplorePlus/README.md">AlignXplore+</a> — Scaling </strong>
 
 Building upon AlignXplore, AlignXplore+ explores how preference reasoning can be scaled <strong> across heterogeneous data sources </strong> — including social media, e-commerce platforms, and news streams — and <strong> generalized across tasks and models </strong>, demonstrating the viability of natural language as a universal interface for transferable personalization.
 
@@ -93,9 +93,9 @@ Our paper [A Survey on Personalized Alignment: The Missing Piece for Large Langu
 
 | Your Goal | Start With |
 |-----------|------------|
-| Data & benchmarks | <a href="https://github.com/JinaLeejnl/AlignX">AlignX</a>|
-| Preference reasoning |<a href="https://github.com/AntResearchNLP/AlignXplore">AlignXplore</a> |
-| Transferable personalization | <a href="https://github.com/AntResearchNLP/AlignXplorePlus">AlignXplore+</a>|
+| Data & benchmarks | <a href="./AlignX/README.md">AlignX</a>|
+| Preference reasoning |<a href="./AlignXplore/README.md">AlignXplore</a> |
+| Transferable personalization | <a href="./AlignXplorePlus/README.md">AlignXplore+</a>|
 
 ### :pushpin: If you are interested in data and benchmarks
 If your goal is to:
@@ -103,7 +103,7 @@ If your goal is to:
 - build baselines for personalization research,
 - or explore large-scale preference data,
 
-➡️ **Start here:** <a href="https://github.com/JinaLeejnl/AlignX">AlignX</a>
+➡️ **Start here:** <a href="./AlignX/README.md>AlignX</a>
 
 > **AlignX** provides over **1.3M open-sourced examples**, along with standardized training and evaluation resources for personalized alignment research.
 
@@ -114,7 +114,7 @@ If your focus is to:
 - study reasoning-based user modeling,
 - or explore dynamic preference updates from streaming interactions,
 
-➡️ **Start here:** <a href="https://github.com/AntResearchNLP/AlignXplore">AlignXplore</a>
+➡️ **Start here:** <a href="./AlignXplore/README.md">AlignXplore</a>
 
 > **AlignXplore** introduces a deep-reasoning framework for transforming noisy and redundant behavioral signals into informative and compact natural language preference summaries.
 
@@ -125,7 +125,7 @@ If you aim to:
 - reuse inferred preferences across tasks,
 - or ensure that the inferred preferences can transfer across models,
 
-➡️ **Start here:** <a href="https://github.com/AntResearchNLP/AlignXplorePlus">AlignXplore+</a>
+➡️ **Start here:** <a href="./AlignXplorePlus/README.md">AlignXplore+</a>
 
 > **AlignXplore+** elevates preference reasoning to a universal, natural language based interface that enables cross-task and cross-model personalization.
 

@@ -1,0 +1,34 @@
+numpy==1.26.4
+packaging
+python-dateutil==2.9.0.post0
+tqdm==4.67.1
+requests
+PyYAML==6.0.2
+filelock==3.18.0
+
+torch==2.8.0
+torchvision==0.23.0     # 如不做视觉任务可删
+torchaudio==2.8.0       # 如不做音频任务可删
+
+transformers==4.57.3
+tokenizers==0.22.1
+datasets==3.1.0          # 如不需要 HF 数据集可删
+accelerate==1.2.0        # 多卡/混合精度/分布式训练
+safetensors==0.4.5
+sentencepiece==0.2.0     # 多数 LLM/翻译模型需要
+sentence-transformers==3.3.1  # 如不需要通用向量可删
+
+huggingface-hub==0.36.0
+fsspec==2025.12.0
+xxhash==3.5.0
+
+scipy==1.14.1
+scikit-learn==1.6.0      # 评估指标 / 简单模型
+pandas==2.0.1            # 数据处理，如不需要可删
+
+bitsandbytes==0.45.0     # 4/8bit 量化，若环境不支持可删
+xformers==0.0.32.post1   # 注意需与 CUDA/PyTorch 版本匹配
+faiss-gpu==1.7.2         # 向量检索 / RAG 需要时保留
+
+ray==2.52.1              # 如不做大规模分布式/调度可删
+vllm==0.11.0             # 高性能推理引擎，使用 vLLM 才需要

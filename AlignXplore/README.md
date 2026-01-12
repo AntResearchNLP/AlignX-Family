@@ -35,7 +35,7 @@ AlignXplore combines cold-start training using synthetic data from teacher model
   <em>Figure: Two-stage training process of AlignXplore.</em>
 </p>
 
-# :rocket: Quick Start
+## :rocket: Quick Start
 ### Requirements
 
 To install requirements:

@@ -13,7 +13,7 @@
 - <strong>Flexible</strong>: Supports heterogeneous input formats out of the box, including preference pairs (e.g., post–chosen–rejected comparisons) and free-form text signals such as user-generated content.
 - <strong>Robust</strong>: Delivers stable and reliable performance under noisy inputs and remains resilient to abrupt or long-term shifts in user preferences.
 
-# Task Overview
+## 📖 Task Overview
 
 Our model performs human-like inductive reasoning for preference inference by progressively refining its preference hypotheses through iterative testing and validation. These inferred preferences can then guide diverse downstream personalization tasks.
 
@@ -24,7 +24,7 @@ Our model performs human-like inductive reasoning for preference inference by pr
   <em>Figure: Preference inference task overview.</em>
 </p>
 
-# Training Process
+## ⚡️Training Process
 
 AlignXplore combines cold-start training using synthetic data from teacher models with reinforcement learning optimization to enhance the model’s reasoning capabilities.
 
@@ -35,8 +35,8 @@ AlignXplore combines cold-start training using synthetic data from teacher model
   <em>Figure: Two-stage training process of AlignXplore.</em>
 </p>
 
-# :rocket: Quick Start
-## Requirements
+## :rocket: Quick Start
+### Requirements
 
 To install requirements:
 
@@ -44,29 +44,29 @@ To install requirements:
 pip install -r requirements.txt
 ```
 
-## Training
+### Training
 
-### Cold-start training
+#### Cold-start training
 
 ```train
 cd cold-start training
 ./sft.sh # Set `data_path` to `cold_start.json` for the base setting, and `streaming_cold_start.json` for the streaming setting.
 ```
 
-### Reinforcement learning
+#### Reinforcement learning
 
 The code is developed based on [Open-Reasoner-Zero](https://github.com/Open-Reasoner-Zero/Open-Reasoner-Zero).
 
-### Base setting
+#### Base setting
 
-#### Train with $R_{jud}$
+##### Train with $R_{jud}$
 
 ```train
 cd reinforcement learning
 ./run_ppo_jud.sh # with `prompt_data` set to `rl_train.json`
 ```
 
-#### Train with $R_{gen}$
+##### Train with $R_{gen}$
 
 Modify the file `/reinforcement learning/orz/ppo/actors.py`:
 - Change line [1027](https://github.com/AntResearchNLP/AlignXplore/blob/9dcd5f3f04c68b460b02a66854d5e309f6705496/reinforcement%20learning/orz/ppo/actors.py#L1027) to `RewardRayActor = ray.remote(num_gpus=1)(genRewardRayActorBase)`.
@@ -76,18 +76,18 @@ cd reinforcement learning
 ./run_ppo_gen.sh # with `prompt_data` set to `rl_train.json`
 ```
 
-### Streaming setting
+#### Streaming setting
 
-#### Train with $R_{jud}$
+##### Train with $R_{jud}$
 
 ```train
 cd reinforcement learning
 ./run_ppo_streaming.sh # with `prompt_data` set to `streaming_rl_train.json`
 ```
 
-## Evaluation
+### Evaluation
 
-### $ACC_{jud}$
+#### $ACC_{jud}$
 
 1. `cd eval`
 2. For the model you have trained, run `python train_gen_pref.py`; for the open-source models, run `python notrain_gen_pref.py`.
@@ -103,7 +103,7 @@ cd reinforcement learning
   - eval: rl_test.json
 -->
 
-# 📄 Citation
+## ✒️ Citation
 ```
 @misc{li2025extendedinductivereasoningpersonalized,
       title={Extended Inductive Reasoning for Personalized Preference Inference from Behavioral Signals}, 

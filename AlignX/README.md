@@ -19,7 +19,10 @@ AlignX releases the <strong>LARGEST</strong> open dataset for personalization re
 
 AlignX comprises a post with two responses and three types of personas that capture both behavioral patterns ($P_{UGC}$ and $P_{PAIR}$) and descriptive features ($P_{DEMO}$), enabling precise preference inference and facilitating preference learning. Notably, LLMs aligned to universal values (e.g., GPT-4o) favor Response 2, in contrast to the user's personalized preference for Response 1.
 
+<p align="center">
 <img src="figures/dataset_overview.png" width="1200px">
+</p>
+
 
 ## :card_index_dividers: Data Format
 

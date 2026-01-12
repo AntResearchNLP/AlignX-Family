@@ -1,0 +1,400 @@
+import os
+import json
+import re
+import argparse
+import random
+import math
+
+from typing import List, Dict, Any, Tuple, Optional
+from pathlib import Path
+from dataclasses import dataclass, field
+
+from transformers import AutoTokenizer
+from vllm import LLM, SamplingParams, sampling_params
+from tqdm import tqdm
+
+
+def parse_args():
+    """parse args"""
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--model_name",
+        type=str,
+        default="Qwen/Qwen3-8B",
+        help="Evaluation model name.",
+    )
+    parser.add_argument(
+        "--input_file",
+        type=str,
+        default=None,
+        help="Dataset name.",
+    )
+    return parser.parse_args()
+
+
+@dataclass
+class EvaluationConfig:
+    """评估配置类"""
+
+    input_file: str
+    model_name: str = "Qwen/Qwen3-8B"
+    system_prompt_path: str = "prompt_templates/preference.txt"
+    tensor_parallel_size: int = 4
+    max_model_len: int = 16384
+
+    temperature: float = 0.6
+    top_p: float = 0.95
+    top_k: int = 20
+    max_tokens: int = 16
+
+    def __post_init__(self):
+        path = self.input_file.replace("/preferences/", "/results/")
+        dir_name = os.path.dirname(path)
+        file_name = os.path.basename(path)
+        file_name = file_name.replace("_preference_", "_result_")
+        self.output_path: str = os.path.join(dir_name, file_name)
+        self.rm = os.path.basename(self.model_name)
+        self.performance_file: str = os.path.join(
+            dir_name, f"performance_{self.rm}.txt"
+        )
+        if "gpt" in self.rm:
+            self.max_tokens = 2048
+
+
+class PreferenceEvaluator:
+    """偏好评估器类"""
+
+    def __init__(self, config: EvaluationConfig):
+        self.config = config
+        self.tokenizer = None
+        self.llm = None
+        self.system_prompt = ""
+
+    def format_prompt(
+        self, prompt: str, response_a: str, response_b: str, persona: str = ""
+    ) -> str:
+        """格式化输入提示"""
+        return (
+            f"Determine which response the user prefers based on the user's preferences. "
+            f"Please output your selection below in a json format by filling in the placeholders in []:"
+            f'{{"selection": "[Item A / Item B]"}}\n'
+            # f"{self.system_prompt}\n"
+            f"<Prompt>\n{prompt}\n</Prompt>\n\n"
+            f"<Preference>\n{persona}</Preference>\n\n"
+            f"<Item A>\n{response_a}\n</Item A>\n\n"
+            f"<Item B>\n{response_b}\n</Item B>\n\n"
+            f"Now, ONLY output your selection without any other text outside of this specified structure."
+        )
+
+    def preprocess_data(self, test_data: List[Dict]) -> List[Dict]:
+        """预处理数据"""
+        processed_data = []
+
+        for idx, item in tqdm(
+            enumerate(test_data), total=len(test_data), desc="Preprocessing data"
+        ):
+            target = item["target"]
+            profile = item["profile"]
+            prompt = target["query"]
+            chosen = target["chosen"]
+            rejected = target["rejected"]
+            flag = random.randint(0, 1)
+            if flag:
+                responseA = chosen
+                responseB = rejected
+                answer = "Item A"
+            else:
+                responseA = rejected
+                responseB = chosen
+                answer = "Item B"
+
+            # 格式化输入
+            formatted_input = self.format_prompt(prompt, responseA, responseB, profile)
+
+            # 创建新的数据项
+            processed_item = {}
+            processed_item["idx"] = idx
+            processed_item["instruction"] = formatted_input
+            processed_item["answer"] = answer
+            processed_item["target"] = target
+            processed_item["profile"] = profile
+
+            processed_data.append(processed_item)
+
+        return processed_data
+
+    def prepare_texts_for_inference(self, data: List[Dict]) -> List[str]:
+        """准备推理文本"""
+        texts = []
+
+        for item in data:
+            prop = item["instruction"]
+
+            # 构建消息格式 (适用于 Qwen3)
+            messages = [
+                {"role": "system", "content": "Generate a task-specific response."},
+                {"role": "user", "content": prop},
+            ]
+
+            text = self.tokenizer.apply_chat_template(
+                messages,
+                tokenize=False,
+                add_generation_prompt=True,
+                enable_thinking=False,
+            )
+
+            texts.append(text)
+
+        return texts
+
+    def generate_responses(self, texts: List[str]) -> List[Any]:
+        """生成模型响应"""
+        print("Generating responses...")
+        sampling_params = SamplingParams(
+            temperature=self.config.temperature,
+            top_k=self.config.top_k,
+            top_p=self.config.top_p,
+            n=1,
+            max_tokens=self.config.max_tokens,
+            logprobs=1,
+        )
+        outputs = self.llm.generate(texts, sampling_params)
+        return outputs
+
+    def parse_model_output(self, output_text: str) -> Optional[str]:
+        """解析模型输出"""
+        if "</think>" in output_text:
+            output_text = output_text.split("</think>")[-1]
+        try:
+            # 尝试直接解析JSON
+            parsed = json.loads(output_text)
+            return parsed.get("selection")
+        except (json.JSONDecodeError, AttributeError):
+            try:
+                # 使用正则表达式提取JSON
+                match = re.search(r"\{.*\}", output_text)
+                if match:
+                    json_str = match.group()
+                    parsed_json = json.loads(json_str)
+                    return parsed_json.get("selection")
+            except (json.JSONDecodeError, AttributeError):
+                print(f"Failed to parse output: {output_text}")
+                return None
+        return None
+
+    def parse_gpt_output(self, output_text: str) -> Optional[str]:
+        """解析模型输出"""
+        marker = "assistantfinal"
+        if marker in output_text:
+            # breakpoint()
+            json_str = output_text.split(marker)[-1].strip()
+            try:
+                return json.loads(json_str).get("selection")
+            except (json.JSONDecodeError, AttributeError):
+                try:
+                    # 使用正则表达式提取JSON
+                    match = re.search(r"\{.*\}", output_text)
+                    if match:
+                        json_str = match.group()
+                        parsed_json = json.loads(json_str)
+                        return parsed_json.get("selection")
+                except (json.JSONDecodeError, AttributeError):
+                    return None
+        return None
+
+    def extract_confidence(self, logprobs_content, answer):
+        def normalize_token(tok: str) -> str:
+            return tok.replace("Ġ", "").replace("Ċ", "\n")
+
+        confidence_of_A = None
+        confidence_of_B = None
+
+        for item in logprobs_content:
+            for k, v in item.items():
+                if normalize_token(v.decoded_token).strip() == "A":
+                    logprob_of_A = v.logprob
+                    # 第4步：转换成标准概率 (0-1)
+                    confidence_of_A = math.exp(logprob_of_A)
+                if normalize_token(v.decoded_token).strip() == "B":
+                    logprob_of_B = v.logprob
+                    confidence_of_B = math.exp(logprob_of_B)
+        if confidence_of_A is None and confidence_of_B is None:
+            # 打印所有 token 的信息，便于调试
+            print("\n--- 所有生成Token的详细信息 ---")
+            for item in logprobs_content:
+                # breakpoint()
+                for k, v in item.items():
+                    print(f"Token: '{v.decoded_token}', LogProb: {v.logprob:.4f}")
+            return 0.0
+        if answer == "Item A":
+            confidence_of_answer = confidence_of_A or (1 - confidence_of_B)
+        elif answer == "Item B":
+            confidence_of_answer = confidence_of_B or (1 - confidence_of_A)
+        return confidence_of_answer
+
+    def process_outputs(self, data: List[Dict], outputs: List[Any]) -> List[Dict]:
+        """处理模型输出"""
+        for idx, output in enumerate(outputs):
+            output_text = output.outputs[0].text
+            output_logprobs = output.outputs[0].logprobs
+
+            answer = data[idx]["answer"]
+            if "gpt" in self.config.rm:
+                selection = self.parse_gpt_output(output_text)
+            else:
+                selection = self.parse_model_output(output_text)
+            confidence = self.extract_confidence(output_logprobs, answer)
+            if selection:
+                data[idx]["selection"] = selection
+                data[idx]["confidence"] = confidence
+            else:
+                data[idx]["selection"] = output_text  # 保存原始输出作为备选
+                data[idx]["confidence"] = confidence
+
+        return data
+
+    def calculate_accuracy(self, data: List[Dict]) -> Tuple[float, int, int, float]:
+        """计算准确率"""
+        total = len(data)
+        correct = 0
+        confidence = 0
+
+        for item in data:
+            if "selection" in item and "answer" in item:
+                if item["selection"] == item["answer"]:
+                    correct += 1
+                    confidence += item["confidence"]
+
+        accuracy = correct / total if total > 0 else 0.0
+        reward = confidence / total if total > 0 else 0.0
+        return accuracy, correct, total, reward
+
+    def save_results(self, data: List[Dict]) -> None:
+        """保存结果"""
+        output_path = Path(self.config.output_path)
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+
+        with open(output_path, "w", encoding="utf-8") as f:
+            json.dump(data, f, indent=4, ensure_ascii=False)
+
+        print(f"Results saved to {output_path}")
+
+    def run_evaluation(self) -> Dict[str, Any]:
+        """运行完整的评估流程"""
+        print("Starting preference evaluation...")
+
+        # 1. 加载模型和数据
+        print(f"Loading tokenizer from {self.config.model_name}")
+        self.tokenizer = AutoTokenizer.from_pretrained(self.config.model_name)
+
+        print(f"Loading LLM model from {self.config.model_name}")
+        self.llm = LLM(
+            model=self.config.model_name,
+            max_model_len=self.config.max_model_len,
+            tensor_parallel_size=self.config.tensor_parallel_size,
+            disable_custom_all_reduce=True,
+        )
+
+        with open(self.config.input_file, "r", encoding="utf-8") as f:
+            test_data = json.load(f)
+
+        with open(self.config.system_prompt_path, "r", encoding="utf-8") as f:
+            self.system_prompt = f.read()
+
+        # 2. 准备推理文本
+        processed_data = self.preprocess_data(test_data)
+        texts = self.prepare_texts_for_inference(processed_data)
+
+        # 3. 生成模型响应
+        print("Generating responses...")
+        sampling_params = SamplingParams(
+            temperature=self.config.temperature,
+            top_k=self.config.top_k,
+            top_p=self.config.top_p,
+            n=1,
+            max_tokens=self.config.max_tokens,
+            logprobs=1,
+        )
+        outputs = self.llm.generate(texts, sampling_params)
+
+        # 4. Calculating accuracy
+        results = self.process_outputs(processed_data, outputs)
+        accuracy, correct, total, confidence = self.calculate_accuracy(results)
+
+        # 5. Saving output
+        output_path = Path(self.config.output_path)
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+
+        with open(output_path, "w", encoding="utf-8") as f:
+            json.dump(results, f, indent=4, ensure_ascii=False)
+
+        print("=" * 40)
+        print(f"Results saved to {output_path}")
+
+        evaluation_results = {
+            "accuracy": accuracy,
+            "correct": correct,
+            "total": total,
+            "confidence": confidence,
+            # "data": results,
+        }
+
+        print(f"Evaluation completed!")
+        print(f"Accuracy: {accuracy:.4f}")
+        print(f"Correct: {correct}/{total}")
+        print(f"Confidence: {confidence}")
+        with open(self.config.performance_file, "a+", encoding="utf-8") as ff:
+            ff.write(f"Results saved to {output_path}.\n")
+            ff.write(json.dumps(evaluation_results) + "\n")
+
+        return evaluation_results
+
+
+def set_seed(seed: int = 42):
+    import numpy as np
+
+    """
+    固定 Python、NumPy、PyTorch 等随机种子，确保结果可复现
+    """
+
+    # 1. 固定 Python 内置随机种子
+    random.seed(seed)
+
+    # 2. 固定环境变量随机因子（部分依赖）
+    os.environ["PYTHONHASHSEED"] = str(seed)
+
+    # 3. 固定 numpy 随机种子
+    np.random.seed(seed)
+
+    try:
+        import torch
+
+        torch.manual_seed(seed)
+        torch.cuda.manual_seed(seed)
+        torch.cuda.manual_seed_all(seed)  # 如果使用多 GPU
+
+        # 确保 cudnn 使用确定性算法
+        torch.backends.cudnn.deterministic = True
+        torch.backends.cudnn.benchmark = False
+    except ImportError:
+        pass  # 没有安装 torch 则跳过
+
+    print(f"Random seed set to {seed}")
+
+
+def main(args):
+    """主函数"""
+    set_seed()
+    # 创建配置
+    input_file = args.input_file
+    model_name = args.model_name
+    config = EvaluationConfig(model_name=model_name, input_file=input_file)
+
+    # 创建评估器并运行评估
+    evaluator = PreferenceEvaluator(config)
+    _ = evaluator.run_evaluation()
+
+
+if __name__ == "__main__":
+    args = parse_args()
+    main(args)

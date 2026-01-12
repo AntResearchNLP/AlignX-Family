@@ -25,7 +25,7 @@ Personalizing Large Language Models for <em>Human-Like</em> SuperIntelligence
 
 
 <p align="center" style="font-size: 17px; color: #555;">
-<a href="https://github.com/JinaLeejnl/AlignX">AlignX</a> &nbsp;•&nbsp; <a href="https://github.com/AntResearchNLP/AlignXplore">AlignXplore</a> &nbsp;•&nbsp; <a href="https://github.com/AntResearchNLP/AlignXplorePlus">AlignXplore+</a>
+<a href="./AlignX/README.md">AlignX</a> &nbsp;•&nbsp; <a href="./AlignXplore/README.md">AlignXplore</a> &nbsp;•&nbsp; <a href="./AlignXplorePlus/README.md">AlignXplore+</a>
 </p>
 
 </div>
@@ -103,7 +103,7 @@ If your goal is to:
 - build baselines for personalization research,
 - or explore large-scale preference data,
 
-➡️ **Start here:** <a href="https://github.com/JinaLeejnl/AlignX">AlignX</a>
+➡️ **Start here:** <a href=./AlignX">AlignX</a>
 
 > **AlignX** provides over **1.3M open-sourced examples**, along with standardized training and evaluation resources for personalized alignment research.
 
@@ -114,7 +114,7 @@ If your focus is to:
 - study reasoning-based user modeling,
 - or explore dynamic preference updates from streaming interactions,
 
-➡️ **Start here:** <a href="https://github.com/AntResearchNLP/AlignXplore">AlignXplore</a>
+➡️ **Start here:** <a href="./AlignXplore">AlignXplore</a>
 
 > **AlignXplore** introduces a deep-reasoning framework for transforming noisy and redundant behavioral signals into informative and compact natural language preference summaries.
 
@@ -125,7 +125,7 @@ If you aim to:
 - reuse inferred preferences across tasks,
 - or ensure that the inferred preferences can transfer across models,
 
-➡️ **Start here:** <a href="https://github.com/AntResearchNLP/AlignXplorePlus">AlignXplore+</a>
+➡️ **Start here:** <a href="./AlignXplorePlus">AlignXplore+</a>
 
 > **AlignXplore+** elevates preference reasoning to a universal, natural language based interface that enables cross-task and cross-model personalization.
 

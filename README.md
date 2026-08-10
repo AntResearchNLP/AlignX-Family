@@ -75,7 +75,7 @@ Building upon AlignXplore, AlignXplore+ explores how preference reasoning can be
 AlignXada adapts task-agnostic universal user profiles to specific downstream personalization tasks through <strong> training-free verbal meta-learning </strong>. It learns a reusable textual refinement policy from a small support set, applies that policy to unseen profiles, and keeps the meta, rewrite, and downstream model weights frozen throughout the process.
 
 <p align="center">
-  <img src="figures/RoadMap2.png" width="100%" alt="RoadMap"/>
+  <img src="figures/RoadMap3.png" width="100%" alt="RoadMap"/>
 </p>
 <p align="center">
   <em>Figure: Roadmap of Our Research on LLM Personalization.</em>

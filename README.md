@@ -53,6 +53,10 @@ To date, AlignX-Family comprises four research works:
 -->
 
 
+## :loudspeaker: News
+<strong>AlignX-Family</strong> welcomes a new member: <strong><a href="./AlignXada/README.md">AlignXada</a></strong>. Building upon our previous work AlignXplore+, <strong>AlignXada focuses on adapting universal preference profiles to specific tasks and models.</strong>  Together, AlignXplore+ and AlignXada establish a complete personalization cycle for lifelong personal agents: from building comprehensive and evolving user profiles to efficiently adapting and applying these profiles with improved performance and token efficiency.
+
+
 ## :link: Project Lineage
 Our research follows a roadmap of <strong>Data → Methodology → Scaling → Adaptation</strong>, progressively advancing the study of personalization in large language models.
 

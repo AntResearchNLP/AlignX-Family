@@ -25,7 +25,7 @@ Personalizing Large Language Models for <em>Human-Like</em> SuperIntelligence
 
 
 <p align="center" style="font-size: 17px; color: #555;">
-<a href="./AlignX/README.md">AlignX</a> &nbsp;•&nbsp; <a href="./AlignXplore/README.md">AlignXplore</a> &nbsp;•&nbsp; <a href="./AlignXplorePlus/README.md">AlignXplore+</a>
+<a href="./AlignX/README.md">AlignX</a> &nbsp;•&nbsp; <a href="./AlignXplore/README.md">AlignXplore</a> &nbsp;•&nbsp; <a href="./AlignXplorePlus/README.md">AlignXplore+</a> &nbsp;•&nbsp; <a href="./AlignXada/README.md">AlignXada</a>
 </p>
 
 </div>
@@ -35,7 +35,7 @@ Personalizing Large Language Models for <em>Human-Like</em> SuperIntelligence
 ## :sparkles: Introduction
 <strong>AlignX-Family</strong> is a research initiative dedicated to advancing the personalization of large language models (LLMs). Launched in late 2024, the project is driven by a central conviction: <strong>personalization is a cornerstone for making the superintelligence exhibited by state-of-the-art LLMs broadly accessible and practically useful to diverse users.</strong> At the time of its inception, however, the community faced a critical gap—there were neither high-quality open-source datasets nor a systematic research framework to support rigorous and reproducible studies of LLM personalization.
 
-AlignX-Family was established to address this gap. The initiative originated from an early research effort codenamed <strong><a href="./AlignX/README.md">AlignX</a></strong>, which focuses on constructing a large-scale dataset for personalized alignment. As the foundational work of the project, AlignX not only provides essential data infrastructure for subsequent explorations, but also lends its name to the broader research family. Building upon this foundation, we further investigated how user preferences can be dynamically reasoned as natural-language summaries from complex and often noisy behavioral signals. These efforts led to the development of <strong><a href="./AlignXplore/README.md">AlignXplore</a></strong> and its extension, <strong><a href="./AlignXplorePlus/README.md">AlignXplore+</a></strong>, which progressively elevates personalization from data construction, to preference reasoning, and ultimately to a universal interface for downstream applications.
+AlignX-Family was established to address this gap. The initiative originated from an early research effort codenamed <strong><a href="./AlignX/README.md">AlignX</a></strong>, which focuses on constructing a large-scale dataset for personalized alignment. As the foundational work of the project, AlignX not only provides essential data infrastructure for subsequent explorations, but also lends its name to the broader research family. Building upon this foundation, we further investigated how user preferences can be dynamically reasoned as natural-language summaries from complex and often noisy behavioral signals. These efforts led to the development of <strong><a href="./AlignXplore/README.md">AlignXplore</a></strong> and its extension, <strong><a href="./AlignXplorePlus/README.md">AlignXplore+</a></strong>, which progressively elevate personalization from data construction, to preference reasoning, and ultimately to a universal interface for downstream applications. <strong><a href="./AlignXada/README.md">AlignXada</a></strong> extends this line of work with training-free adaptation, learning textual refinement policies that specialize universal user profiles for downstream personalization tasks while keeping model weights frozen.
 
 
 In parallel, the broader landscape of LLM development has rapidly shifted toward personalization. Leading industry models are increasingly incorporating mechanisms such as long-term memory, interactive preference elicitation, and explicit style control. While these advances deliver impressive user experiences, the <strong>core technologies underpinning personalized intelligence largely remain closed and inaccessible to the research community</strong>, limiting transparency, reproducibility, and collective progress.
@@ -45,17 +45,18 @@ Through full open-sourcing, AlignX-Family aims to bring personalization to the f
 
 
 <!--
-To date, AlignX-Family comprises three research works:
+To date, AlignX-Family comprises four research works:
 - <strong><a href="#package-alignx">AlignX</a></strong> contributes the largest open-source dataset for personalized alignment.
 - <strong><a href="#robot-alignxplore">AlignXplore</a></strong> introduces a deep-reasoning approach to infer user preferences from complex behavioral signals, with its key technical innovation being the ability to dynamically update preferences from streaming user interactions.
 - <strong><a href="#robot-zap-alignxplore">AlignXplore+</a></strong> further unlocks the potential of AlignXplore — learning preference inference models from heterogeneous signals and extending their impact far beyond response selection to power a broad range of personalized applications, from recommendation to response generation.
+- <strong><a href="./AlignXada/README.md">AlignXada</a></strong> adapts universal user profiles to downstream personalization tasks through training-free verbal meta-learning.
 -->
 
 
 ## :link: Project Lineage
-Our research follows a roadmap of <strong>Data → Methodology → Scaling</strong>, progressively advancing the study of personalization in large language models.
+Our research follows a roadmap of <strong>Data → Methodology → Scaling → Adaptation</strong>, progressively advancing the study of personalization in large language models.
 
-To date, the project comprises three tightly connected sub-projects:
+To date, the project comprises four tightly connected sub-projects:
 
 ### :package: <strong> <a href="./AlignX/README.md">AlignX</a> — Data </strong>
 
@@ -68,6 +69,10 @@ AlignXplore introduces a deep-reasoning framework for inferring user preferences
 ### :zap: <strong> <a href="./AlignXplorePlus/README.md">AlignXplore+</a> — Scaling </strong>
 
 Building upon AlignXplore, AlignXplore+ explores how preference reasoning can be scaled <strong> across heterogeneous data sources </strong> — including social media, e-commerce platforms, and news streams — and <strong> generalized across tasks and models </strong>, demonstrating the viability of natural language as a universal interface for transferable personalization.
+
+### :arrows_counterclockwise: <strong> <a href="./AlignXada/README.md">AlignXada</a> — Adaptation </strong>
+
+AlignXada adapts task-agnostic universal user profiles to specific downstream personalization tasks through <strong> training-free verbal meta-learning </strong>. It learns a reusable textual refinement policy from a small support set, applies that policy to unseen profiles, and keeps the meta, rewrite, and downstream model weights frozen throughout the process.
 
 <p align="center">
   <img src="figures/RoadMap2.png" width="100%" alt="RoadMap"/>
@@ -96,6 +101,7 @@ Our paper [A Survey on Personalized Alignment: The Missing Piece for Large Langu
 | Data & benchmarks | <a href="./AlignX/README.md">AlignX</a>|
 | Preference reasoning |<a href="./AlignXplore/README.md">AlignXplore</a> |
 | Transferable personalization | <a href="./AlignXplorePlus/README.md">AlignXplore+</a>|
+| Training-free profile adaptation | <a href="./AlignXada/README.md">AlignXada</a>|
 
 ### :pushpin: If you are interested in data and benchmarks
 If your goal is to:
@@ -103,7 +109,7 @@ If your goal is to:
 - build baselines for personalization research,
 - or explore large-scale preference data,
 
-➡️ **Start here:** <a href="./AlignX/README.md>AlignX</a>
+➡️ **Start here:** <a href="./AlignX/README.md">AlignX</a>
 
 > **AlignX** provides over **1.3M open-sourced examples**, along with standardized training and evaluation resources for personalized alignment research.
 
@@ -128,6 +134,17 @@ If you aim to:
 ➡️ **Start here:** <a href="./AlignXplorePlus/README.md">AlignXplore+</a>
 
 > **AlignXplore+** elevates preference reasoning to a universal, natural language based interface that enables cross-task and cross-model personalization.
+
+### :pushpin: If you need to adapt universal profiles to a downstream task without model training
+
+If you aim to:
+- specialize task-agnostic user profiles for a particular personalization task,
+- learn reusable profile-refinement policies from a small support set,
+- or keep all model weights frozen during adaptation,
+
+➡️ **Start here:** <a href="./AlignXada/README.md">AlignXada</a>
+
+> **AlignXada** uses verbal meta-learning to learn and apply task-specific textual refinement policies, enabling training-free profile adaptation for held-out users.
 
 ## 📄 Citations
 AlignX-Family is a collection of closely related research projects that jointly advance the personalization of large language models.  If you find the projects helpful, please consider citing the following papers accordingly:

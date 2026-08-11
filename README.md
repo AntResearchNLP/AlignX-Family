@@ -195,6 +195,20 @@ AlignX-Family is a collection of closely related research projects that jointly 
 }
 ```
 
+- **AlignXada — training-free framework for task-specific preference adaptation**
+
+```bibtex
+@misc{liu2026learningpreferenceadaptationlarge,
+      title={Learning Preference Adaptation for Large Language Model Personalization via Verbal Reinforcement Learning},
+      author={Yuting Liu and Wei Wu and Jianzhe Zhao and Guibing Guo},
+      year={2026},
+      eprint={2608.09507},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2608.09507},
+}
+```
+
 <!--
 # :package: AlignX
 

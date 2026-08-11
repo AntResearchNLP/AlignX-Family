@@ -1,7 +1,8 @@
 <div align="center">
   <h1 style="font-size: 40px;">AlignXada</h1>
-  <p>Adaptive Profile Refinement for Downstream Personalization</p>
+  <p>Learning Preference Adaptation for Large Language Model Personalization via Verbal Reinforcement Learning</p>
 
+  [![arXiv](https://img.shields.io/badge/Paper-arXiv-red.svg)](https://arxiv.org/abs/2608.09507)
   [![🤗 HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Benchmark-yellow)](https://huggingface.co/datasets/VanillaH1/AlignXada-Benchmark)
 </div>
 
@@ -152,3 +153,17 @@ Set `OUTPUT_FILE` to override the default output path. The evaluation reports ta
 - All model weights remain frozen; only the textual refinement policy changes.
 - One policy is learned for each task/downstream-model configuration and reused across held-out users in that configuration.
 - API keys are redacted from optimizer logs. Profiles and model outputs may still contain sensitive user information, so do not publish generated logs or result files without an independent privacy review.
+
+## ✍️ Citation
+
+```bibtex
+@misc{liu2026learningpreferenceadaptationlarge,
+      title={Learning Preference Adaptation for Large Language Model Personalization via Verbal Reinforcement Learning},
+      author={Yuting Liu and Wei Wu and Jianzhe Zhao and Guibing Guo},
+      year={2026},
+      eprint={2608.09507},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2608.09507},
+}
+```

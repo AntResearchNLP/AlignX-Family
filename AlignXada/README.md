@@ -12,12 +12,32 @@
 
 This directory contains the minimal runnable release. It intentionally excludes dataset construction, baseline implementations, SFT/RL experiments, analysis code, private endpoints, and result artifacts.
 
+<p align="center">
+  <img src="figures/alignxada_framework.png" width="100%" alt="AlignXada framework"/>
+</p>
+<p align="center">
+  <em>Figure 2. Overview of AlignXada. A task-specific refinement policy is induced from a small support set and then frozen for held-out deployment; all model weights remain frozen throughout.</em>
+</p>
+
 ## ✨ Key Features
 
 - <strong>Training-Free Adaptation</strong>: AlignXada refines natural-language user profiles without updating model parameters.
 - <strong>Task-Adaptive</strong>: A textual policy is learned for each downstream task and model configuration, then reused across held-out users.
 - <strong>Model-Agnostic</strong>: Separate meta, rewrite, and downstream model roles can use OpenAI-compatible endpoints; the Python runtime also supports local vLLM models.
 - <strong>Adaptive Support Sampling</strong>: The optimizer focuses policy updates on informative support examples and can gate candidate policies on a held-out development set.
+
+## 📊 Main Results
+
+The table below summarizes the main results across 13 tasks. Performance columns report the average task-level percentage-point change relative to the raw universal-profile baseline; higher is better. Token ratio (TR) is the refined profile length divided by the original profile length; lower is better.
+
+| Downstream Model | RAG Avg. Δ vs. Raw | AlignXada Avg. Δ vs. Raw | Token Ratio (TR) ↓ |
+|---|---:|---:|---:|
+| Qwen3-8B | -3.59 | **+2.27** | 20.8% |
+| DeepSeek-V4-Flash | -4.86 | **+7.00** | 25.5% |
+| GPT-5-mini | -1.92 | **+2.19** | 22.2% |
+| **Overall** | **-3.46** | **+3.82** | **22.8%** |
+
+Across 39 task-model cells, AlignXada improves 33 cells over the raw-profile baseline and outperforms RAG in 36 cells while retaining only 22.8% of the original profile tokens. See the [paper](https://arxiv.org/abs/2608.09507) for complete task-level results and significance analysis.
 
 ## 🗂️ Repository Layout
 
